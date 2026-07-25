@@ -1,0 +1,22 @@
+# Template file for 'oxwm'
+pkgname=oxwm
+version=0.12.0
+revision=1
+archs="x86_64*"
+build_style=zig-build
+configure_args="--sysroot /"
+hostmakedepends="pkg-config"
+makedepends="libX11-devel libXinerama-devel libXft-devel fontconfig-devel freetype-devel"
+short_desc="X11 Window Manager Inspired by DWM, but with better sane defaults"
+maintainer="muppetfrogget <muppetfrogget@proton.me>"
+license="GPL-3.0-or-later"
+homepage="https://ox-docs.vercel.app/"
+distfiles="https://github.com/tonybanters/oxwm/archive/refs/tags/v${version}.tar.gz"
+checksum=63aacc8f61d4a85e859152e55d96274ad7873878dfade8755d01fee6cd6bb1f7
+nopie=yes
+
+post_install() {
+	vman resources/oxwm.1
+	vinstall templates/oxwm.lua 644 usr/share/oxwm
+	vinstall resources/oxwm.desktop 644 usr/share/xsessions
+}
