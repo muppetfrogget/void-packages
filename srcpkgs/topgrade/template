@@ -1,6 +1,6 @@
 # Template file for 'topgrade'
 pkgname=topgrade
-version=17.8.0
+version=17.12.2
 revision=1
 build_style=cargo
 build_helper=qemu
@@ -9,7 +9,7 @@ maintainer="tranzystorekk <tranzystorek.io@protonmail.com>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/topgrade-rs/topgrade"
 distfiles="https://github.com/topgrade-rs/topgrade/archive/refs/tags/v${version}.tar.gz"
-checksum=e723b723db7ef3179417e3529bd67a637a3ceafed8f63ee81202cfae9200ad9b
+checksum=9cffc162b7a4e0bc40379bc05eff44f62ce57c3ac13126b2d310068f138488ca
 
 post_install() {
 	local _topgrade="${DESTDIR}/usr/bin/topgrade"

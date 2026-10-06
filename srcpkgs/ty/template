@@ -1,6 +1,6 @@
 # Template file for 'ty'
 pkgname=ty
-version=0.0.55
+version=0.0.81
 revision=1
 build_style=python3-pep517
 build_helper="rust qemu"
@@ -12,7 +12,7 @@ license="MIT"
 homepage="https://docs.astral.sh/ty/"
 changelog="https://raw.githubusercontent.com/astral-sh/ty/main/CHANGELOG.md"
 distfiles="https://github.com/astral-sh/ty/releases/download/${version}/source.tar.gz"
-checksum=69a2b51b9f29bc4b0b0f95aee7cce1cb6e57f9af9002582831fc4d9982199ffd
+checksum=dd9214ff94b594a6f7ac217655c79d7a0cac78fbd18f45246f31672f4ca45bf6
 
 post_install() {
 	vlicense LICENSE
